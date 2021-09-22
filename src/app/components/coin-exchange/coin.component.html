@@ -1,0 +1,33 @@
+<div class="exchange-form">
+  <h1>Realizar Cambio</h1>
+  <h2 class="message-exchange">Seleccione las monedas</h2>
+  
+  <div class="row">
+    
+    <input [formControl]="amount" type="text" class="input-amount" placeholder="0.00">
+
+  </div>
+  <div class="row">
+    
+    <p>
+      <select name="selectOriginCoin" [formControl]="originCoin" class="selectCoins">
+        <option *ngFor="let coin of coins; let index = index" [value]="coin.code"  [selected]="index == 0">{{coin.code}}</option>
+      </select>
+    </p>
+
+    <p>
+      <select name="selectDestinyCoin" [formControl]="originCoin" class="selectCoins">
+        <option *ngFor="let coin of coins; let index = index" [value]="coin.code"  [selected]="index == 0">{{coin.code}}</option>
+      </select>
+    </p>
+    
+    <button type="submit">
+      <img class="png-icon" src="../../assets/img/exchange.png" />
+    </button>
+
+  </div>
+  <div class="row">
+    <input [formControl]="change" type="text" class="input-amount" placeholder="1000.00">
+  </div>
+
+</div>

@@ -1,0 +1,29 @@
+<table mat-table [dataSource]="coins" class="mat-elevation-z8 coins-table">
+
+    <ng-container matColumnDef="Nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let coin"> {{coin.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Precio">
+        <th mat-header-cell *matHeaderCellDef> Precio </th>
+        <td mat-cell *matCellDef="let coin">$ {{coin.price}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Criptomoneda">
+        <th mat-header-cell *matHeaderCellDef> Criptomoneda </th>
+        <td mat-cell *matCellDef="let coin"> {{coin.code}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Convertir">
+        <th mat-header-cell *matHeaderCellDef> Convertir </th>
+        <td mat-cell *matCellDef="let coin">
+            <button type="submit">
+                <img class="png-icon" src="../../../assets/img/shuffle.png" />
+            </button>
+        </td>
+    </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
