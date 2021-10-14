@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url_API: '/app/coins'
+  url_API: 'https://talllerfs.azurewebsites.net/app/coins'
 };
 
 /*

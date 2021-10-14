@@ -17,6 +17,7 @@ export class CoinService {
 
     getAllCoins() {
         return this.http.get<Coins[]>(`${environment.url_API}/`);
+        //return this.http.get<Coins[]>(`https://talllerfs.azurewebsites.net/app/coins/`);
     }
 
     getCoinCode( code: string) {
